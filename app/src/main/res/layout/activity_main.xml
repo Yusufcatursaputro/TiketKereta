@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:padding="16dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="16dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            tools:context=".MainActivity">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pemesanan
+                Tiket Kereta"
+                android:textColor="@color/black"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:paddingTop="70dp"
+                android:paddingBottom="50dp"
+                />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/Username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_background"
+                android:hint="Nama Pemesan"
+                android:drawablePadding="5dp"
+                android:textColorHint="#828282"
+                android:textColor="@color/black"
+                android:layout_marginBottom="20dp"
+                android:elevation="5dp"
+                android:translationZ="2dp"
+                android:drawableStart="@drawable/baseline_person_24"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/jam_keberangkatan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_background"
+                android:hint="Jam Keberangkatan"
+                android:drawablePadding="5dp"
+                android:textColorHint="#828282"
+                android:textColor="@color/black"
+                android:layout_marginBottom="20dp"
+                android:elevation="5dp"
+                android:translationZ="2dp"
+                android:drawableStart="@drawable/baseline_access_time_24"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tanggal_keberangkatan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_background"
+                android:hint="Pilih Tanggal Keberangkatan"
+                android:drawablePadding="5dp"
+                android:textColorHint="#828282"
+                android:textColor="@color/black"
+                android:layout_marginBottom="20dp"
+                android:elevation="5dp"
+                android:translationZ="2dp"
+                android:drawableStart="@drawable/baseline_calendar_month_24"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tujuan1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Tujuan"
+                android:textColorHint="#828282"
+                app:hintTextColor="#828282"
+                app:startIconDrawable="@drawable/baseline_location_on_24"
+                app:startIconTint="@color/black"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                >
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textCapWords"
+                    android:paddingStart="20dp"
+                    android:text=""
+                    android:textColor="#828282"
+                    android:background="@drawable/edit_text_background"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Spinner
+                android:id="@+id/spinnerProvinces"
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+
+            <DatePicker
+                android:id="@+id/datePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:calendarViewShown="false"
+                android:datePickerMode="calendar"
+                android:visibility="gone"/>
+
+            <TimePicker
+                android:id="@+id/timePicker"
+                android:timePickerMode="spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/btn_konfirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#525BFF"
+                android:layout_marginTop="40dp"
+                android:text="Pesan Tiket"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
